@@ -1,0 +1,151 @@
+
+---
+title: "<span style='color:#2E6AA8;'>Peer-graded Assignment: R Markdown Presentation & Plotly </span>"
+author: "Rohith Mohan"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+ooutput:
+  html_document:
+    toc: yes
+    toc_float: yes
+subtitle: "<span style=\"font-size:small; font-style:italic;\">Peer-graded Assignment: R Markdown Presentation & Plotly - [Johns Hopkins University - Coursera]</span>"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Instructions
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity!
+
+The rubric contains the following two questions:
+
+*  Does the web page feature a date and is this date less than two months before the date that          you’re     grading this assignment?
+  
+*  Is the web page a presentation and does it feature an interactive plot that appears to have been     created with Plotly?
+
+
+## Overview
+Data visualization is a crucial aspect of data analysis. Plotly is a powerful library in R for creating interactive and modern plots. This assignment includes instructions on how to create 2D, 3D, and other modern figures using Plotly.
+
+
+```{r warning=FALSE, error=FALSE, message=FALSE}
+library(plotly)
+```
+
+## Scatter Plot (2D)
+
+```{r warning=FALSE, error=FALSE}
+# Generate sample data
+set.seed(123)
+data <- data.frame(
+  x = rnorm(100),
+  y = rnorm(100)
+)
+
+# Create scatter plot
+scatter_plot <- plot_ly(data, x = ~x, y = ~y, type = "scatter", mode = "markers") %>%
+  layout(title = "Scatter Plot",
+         xaxis = list(title = "X-axis"),
+         yaxis = list(title = "Y-axis"))
+
+# Show scatter plot
+scatter_plot
+```
+
+The scatter plot shows random distribution of points across the x and y axes. There doesn't seem to be any discernible pattern or correlation between the variables x and y.
+
+## Scatter Plot (3D)
+
+```{r warning=FALSE, error=FALSE}
+# Generate sample 3D data
+set.seed(123)
+data_3d <- data.frame(
+  x = rnorm(100),
+  y = rnorm(100),
+  z = rnorm(100)
+)
+
+# Create 3D scatter plot with colorful markers
+scatter3d_plot <- plot_ly(data_3d, x = ~x, y = ~y, z = ~z, type = "scatter3d", mode = "markers",
+                          marker = list(color = ~sqrt(x^2 + y^2 + z^2), colorscale = "Viridis")) %>%
+  layout(title = "3D Scatter Plot",
+         scene = list(xaxis = list(title = "X-axis"),
+                      yaxis = list(title = "Y-axis"),
+                      zaxis = list(title = "Z-axis")))
+
+# Show colorful 3D scatter plot
+scatter3d_plot
+```
+
+The 3D scatter plot effectively visualizes the distribution of points in three-dimensional space. Points closer to the origin appear in darker shades, while points farther away are represented in brighter colors. This color variation highlights spatial density, with denser clusters near the origin.
+
+## Bar Chart
+```{r warning=FALSE, error=FALSE}
+# Generate sample data for bar chart
+set.seed(123)
+bar_data <- data.frame(
+  category = c("A", "B", "C", "D"),
+  value = c(20, 30, 25, 35)
+)
+
+# Create bar chart
+bar_chart <- plot_ly(bar_data, x = ~category, y = ~value, type = "bar") %>%
+  layout(title = "Bar Chart",
+         xaxis = list(title = "Categories"),
+         yaxis = list(title = "Values"))
+
+# Show bar chart
+bar_chart
+```
+
+The bar chart illustrates the values of different categories (A, B, C, D). Category D has the highest value, followed by category B, then category C, and finally category A.
+
+
+## Box Plot
+```{r warning=FALSE, error=FALSE}
+# Generate sample data for box plot
+set.seed(123)
+box_data <- data.frame(
+  group = rep(c("Group 1", "Group 2"), each = 100),
+  value = rnorm(200)
+)
+
+# Create box plot
+box_plot <- plot_ly(box_data, y = ~value, color = ~group, type = "box") %>%
+  layout(title = "Box Plot",
+         yaxis = list(title = "Values"))
+
+# Show box plot
+box_plot
+```
+
+The box plot displays the distribution of values in two groups (Group 1 and Group 2). It appears that the median value of Group 1 is slightly higher than Group 2. Additionally, the spread of values in Group 1 seems to be larger compared to Group 2, as indicated by the longer whiskers.
+
+
+## Conclusion
+In this assignment, We have explored various types of data visualization using the Plotly library in R. Plotly offers interactive and modern plots, making it a powerful tool for data analysis and communication.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+You can find the source code on my [GitHub:ROHITHKM92](https://github.com/ROHITHKM92/Coursera/tree/main/Developing_Data_Products/Week_3) 👉 [ Simply click here! 🚀🌟💻🔍](https://github.com/ROHITHKM92/Coursera/tree/main/Developing_Data_Products/Week_3)
+
+ 
