@@ -35,29 +35,26 @@ SpaceX offers Falcon 9 rocket launches at $62 million, compared to other provide
 
 ### Performance Metrics
 1. **Accuracy**: The proportion of true results (both true positives and true negatives) among the total number of cases examined.
-   $$
-   \text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}
-   $$
+   <br>
+   $$\text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}$$
 
 2. **Precision**: The proportion of true positive results in the predicted positives.
-   $$
-   \text{Precision} = \frac{TP}{TP + FP}
-   $$
+   <br>
+   $$\text{Precision} = \frac{TP}{TP + FP}$$
 
 3. **Recall (Sensitivity)**: The proportion of true positive results in the actual positives.
-   $$
-   \text{Recall} = \frac{TP}{TP + FN}
-   $$
+   <br>
+   $$\text{Recall} = \frac{TP}{TP + FN}$$
 
 4. **F1 Score**: The harmonic mean of precision and recall.
-   $$
-   \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-   $$
+   <br>
+   $$\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
 
 5. **Specificity**: The proportion of true negative results in the actual negatives.
-   $$
-   \text{Specificity} = \frac{TN}{TN + FP}
-   $$
+   <br>
+   $$\text{Specificity} = \frac{TN}{TN + FP}$$
+
+
 
 ![Confusion_matrix](https://github.com/ROHITHKM92/Coursera/assets/87298902/c3cc710d-2219-4ed3-b227-790f7b507058)
 
@@ -69,3 +66,9 @@ SpaceX offers Falcon 9 rocket launches at $62 million, compared to other provide
 ---
 
 Dive into the data, unleash your analytical prowess, and let’s predict the future of rocket science together! 🚀🌟
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
