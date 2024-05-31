@@ -68,7 +68,8 @@ SpaceX offers Falcon 9 rocket launches at $62 million, compared to other provide
 Dive into the data, unleash your analytical prowess, and let’s predict the future of rocket science together! 🚀🌟
 
 
+<!-- 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
+</script> 
+-->
